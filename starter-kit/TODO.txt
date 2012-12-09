@@ -1,13 +1,5 @@
-  ______           _              _     
- |  ____|         | |            (_)    
- | |__   _ __ ___ | |__   ___ _ ___ ___ 
- |  __| | '_ ` _ \| '_ \ / _ \ '__| / __|
- | |____| | | | | | |_) |  __/ |_| \__ \
- |______|_| |_| |_|_.__/ \___|_(_) |___/
-                                _/ |    
-                               |__/
 
-Your Ember.js project is almost ready! Here's how to get started:
+Your EmberJS + RequireJS project is almost ready! Here's how to get started:
 
 - Change lang="en" in the <html> tag if your page is not in English
 
@@ -18,12 +10,11 @@ Your Ember.js project is almost ready! Here's how to get started:
 
 - Change the favicons
 
-- Start writing your app in js/app.js.
+- Start writing your app writing models, views, controllers and templates in in scripts/app/models, scripts/app/views... and so on. To make them public update scripts/app/main (following module pattern).
+
+- Change the name of your app in config.js, setting the variable "app_name"
 
 - Describe your application HTML in index.html.
-
-- During development, you can link to ember-*.js to get the
-  unminified version of Ember.js.
 
 - Make a 404.html page if you have a 404 redirection in your server configuration file
 
@@ -34,9 +25,7 @@ Your Ember.js project is almost ready! Here's how to get started:
 
 == About =========================
 
-This Ember.js package is based on a build of HTML 5 Boilerplate from
-initializr.com. Thanks @jverrecchia!
+This EmberJS + RequireJS starter kit is based on Ember.js starter-kit
 
 == Contact =======================
-
-www.emberjs.com
+https://github.com/fernandogmar
