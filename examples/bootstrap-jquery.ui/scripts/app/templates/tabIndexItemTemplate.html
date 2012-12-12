@@ -1,0 +1,20 @@
+
+{{#if view.editing}}
+<form class="form-inline editableform">
+  <input type="text" {{bindAttr value="view.content.name"}} maxlength="30"> 
+  
+  <div class="buttons">
+    <button type="button" {{action changeTitle on="click" target="view"}}  class="btn btn-primary"><i class="icon-ok icon-white"></i></button>
+    <button type="button" {{action toggleEditing on="click" target="view"}} class="btn"><i class="icon-remove"></i></button>
+  </div>
+</form>
+{{else}}
+<a {{bindAttr href="view.content.link"}}><i class="icon-resize-vertical"></i>
+  {{view.content.name}}
+
+  <div class="buttons pull-right">  
+    <button type="button" {{action toggleEditing on="click" target="view"}} class="btn"><i class="icon-pencil"></i></button>
+    <button type="button" {{action removeTab on="click" target="view"}}  class="btn btn-danger"><i class="icon-remove-sign icon-white"></i></button>
+  </div>
+</a>
+{{/if}}

@@ -1,0 +1,66 @@
+
+/*/WindowContainer-------------------/*/
+.window-container {
+  cursor: move;
+  width: 400px;
+  max-height: 600px;
+  overflow: visible;
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  z-index: 1050;
+  background-color: white;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  outline: none;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.window-container > .head {
+  height:30px; 
+  background-color: #555555;
+}
+
+.window-container > .content {
+  padding: 5px;
+}
+/*/End WindowContainer---------------/*/
+
+
+
+/*/TabIndexItem----------------------/*/
+.tab-index-item {
+  line-height: 40px;
+}
+
+.tab-index-item .buttons {
+  display: none;
+}
+
+.tab-index-item:hover .buttons{
+  display: inline-block;
+}
+
+.tab-index-item .icon-resize-vertical {
+  display: none;
+}
+
+.tab-index-item:hover .icon-resize-vertical{
+  display: inline-block;
+}
+
+/*/End TabIndexItem------------------/*/
+
+/*/Tab-------------------------------/*/
+.tab .navbar {
+  margin-bottom: 0px;
+}
+/*/End Tab---------------------------/*/
