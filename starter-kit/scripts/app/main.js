@@ -4,11 +4,11 @@ define([
 	"app/router"
 ], function(ApplicationView, ApplicationController, Router){
 	/*Module Pattern*/
-	var App = Ember.Mixin.create({
+	var App = {
 		ApplicationView: ApplicationView,
 		ApplicationController: ApplicationController,
 		Router: Router
-	});
+	};
 
 	return App;
 });

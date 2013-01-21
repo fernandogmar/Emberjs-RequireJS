@@ -18,7 +18,14 @@ define({
 		'ember': 'libs/ember/1.0.0-pre.4/ember',
 		/*requirejs-plugins*/
 		'text': 'libs/requirejs-plugins/text',
+		'hbs': 'libs/requirejs-plugins/hbs',
 		'domReady': 'libs/requirejs-plugins/domReady'
+	},
+	/*hbs plugin options*/
+	hbs: {
+		disableI18n: true,
+		templateExtension: "html"
 	}
+
 }); 
 

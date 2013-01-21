@@ -1,6 +1,5 @@
-// Version: v1.0.0-pre.3-19-g015138e
-// Last commit: 015138e (2013-01-17 23:02:17 -0800)
-
+// Version: v1.0.0-pre.4
+// Last commit: 855db1a (2013-01-17 23:06:53 -0800)
 
 (function() {
 /*global __fail__*/
@@ -1149,10 +1148,10 @@ var populateListeners = function(name) {
 };
 
 var time = (function() {
-	var perf = 'undefined' !== typeof window ? window.performance || {} : {};
-	var fn = perf.now || perf.mozNow || perf.webkitNow || perf.msNow || perf.oNow;
-	// fn.bind will be available in all the browsers that support the advanced window.performance... ;-)
-	return fn ? fn.bind(perf) : function() { return +new Date(); };
+  var perf = 'undefined' !== typeof window ? window.performance || {} : {};
+  var fn = perf.now || perf.mozNow || perf.webkitNow || perf.msNow || perf.oNow;
+  // fn.bind will be available in all the browsers that support the advanced window.performance... ;-)
+  return fn ? fn.bind(perf) : function() { return +new Date(); };
 })();
 
 
