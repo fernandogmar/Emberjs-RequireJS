@@ -3,13 +3,21 @@ define([
   "ember",
   "controllers/tabListController"
 ], function(require, Ember, tabListController){
+
+  function getTabListController(){
+    if(!tabListController){
+      tabListController = require("controllers/tabListController");//due to circular dependency
+    }
+    return tabListController;
+  };
+
   var TabModel = Ember.Object.extend({
     title: null,
     content: null,
     order: null,
     init: function(){
       this._super();
-      tabListController = require("controllers/tabListController");//due to circular dependency
+      getTabListController();
       this.notifyPropertyChange("name");
     },
     onChangeName: function(key, value){

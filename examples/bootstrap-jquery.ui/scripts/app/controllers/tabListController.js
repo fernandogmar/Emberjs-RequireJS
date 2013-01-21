@@ -36,9 +36,6 @@ define([
     content: [], 
     sortProperties: ["order"],
     sortAscending: true,
-    init: function(){
-        this._super();
-    },
     tabs: function(){
       return this.filter(function(item, index, list){
         return !item.get("deleted");

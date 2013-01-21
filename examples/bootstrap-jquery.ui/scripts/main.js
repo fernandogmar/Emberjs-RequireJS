@@ -1,10 +1,10 @@
 (function(root){
 	require(["config"], function(config){
 		requirejs.config(config);
-		require(["App", "domReady!", "ember"], function(App, doc, Ember){
+		require(["App", "ember"], function(App, Ember){
 			var app_name = config.app_name || "App";
 			root[app_name] = App = Ember.Application.create(App);
-			!App.isInitialized && App.initialize();
+			App.deferUntilDOMReady();
 		});
 	});
 })(this);
