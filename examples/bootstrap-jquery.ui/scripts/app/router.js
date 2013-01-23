@@ -1,27 +1,20 @@
-define([
-  "ember",
-  "controllers/tabListController"
-], function(Ember, tabListController){
+define(["ember"], function(Ember) {
 
-  var Router = Ember.Router.extend({
-    root : Ember.Route.extend({
-      index : Ember.Route.extend({
-        route : '/',
-        connectOutlets : function(router, context) {
-          tabListController.showFirstTab();
-          return router.get('applicationController').connectOutlet('selectedTab');
-        }
-      }),
-      site_page : Em.Route.extend({
-        route : '/:tab',
-        connectOutlets : function(router, context) {
-          tabListController.selectTab(context.tab);
-          return router.get('applicationController').connectOutlet('selectedTab');
-        }
-      })
-    })
-  }); 
+  var Router = Ember.Router.extend();
 
+  Router.map(function() {
+    this.route("index", {
+      path: "/"
+    });
+    this.route("selectedTab", {
+      path: "/:tab"
+    });
+  /*this.resource("tabs", {path: "/"}, function(){
+    this.route("selectedTab", {
+      path: ":tab"
+    });
+  });*/
+  });
 
-	return Router;
+  return Router;
 });

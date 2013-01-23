@@ -31,7 +31,7 @@ define([
   };
 
   
- var tabListController = Em.ArrayController.create({
+ var tabListController = Em.ArrayController.createWithMixins({
     selected: null,
     content: [], 
     sortProperties: ["order"],
@@ -44,7 +44,7 @@ define([
     selectTab: function(slug){
         var selectedTab = this.get("content").findProperty("slug", slug);
         this.set("selected", selectedTab);
-        return this;
+        return selectedTab;
     },
     addTab: function(tab){
       var tabs = this.get('content');
@@ -97,7 +97,6 @@ define([
           });//no tab to show
         }
       }
-      this.removeObject(tab);
       tab.set("deleted", true);
     },  
     showTab: function(tab){

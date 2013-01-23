@@ -15,7 +15,7 @@ define([
       }.property("controller.selected").cacheable(),
       click: function(e){
         e.preventDefault();
-        tabListController.showTab(this.get('content'));  
+        tabListController.showTab(this.get('content'));
       }
   });
   

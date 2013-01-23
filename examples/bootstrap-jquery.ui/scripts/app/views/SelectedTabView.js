@@ -3,9 +3,12 @@ define([
   "controllers/tabListController",
   "text!templates/selectedTabTemplate.html"
 ], function(Ember, tabListController, selectedTabTemplate){
+
+  Ember.TEMPLATES["selectedTab"] = Ember.Handlebars.compile(selectedTabTemplate);
+
   var SelectedTabView = Ember.View.extend({
     classNames: ["hero-unit"],
-    template: Ember.Handlebars.compile(selectedTabTemplate),
+    templateName: "selectedTab",
     controller: tabListController,
     contentBinding: "controller.selected"
   });

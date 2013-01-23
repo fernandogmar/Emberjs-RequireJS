@@ -8,8 +8,10 @@ define([
 	"controllers/ApplicationController",
 	"controllers/tabListController",
 	"app/router",
+	"routes/IndexRoute",
+	"routes/SelectedTabRoute",
 	"scripts/fixtures/tabFixtures.js"
-], function(ApplicationView, WindowContainerView, TabIndexView, SelectedTabView, TabMenuView, TabView, ApplicationController, tabListController, Router, tabFixtures) {
+], function(ApplicationView, WindowContainerView, TabIndexView, SelectedTabView, TabMenuView, TabView, ApplicationController, tabListController, Router, IndexRoute, SelectedTabRoute, tabFixtures) {
 
 	//setup
 	tabListController.addTabs(tabFixtures.tabs);
@@ -24,7 +26,9 @@ define([
 		TabView: TabView,
 		ApplicationController: ApplicationController,
 		tabListController: tabListController,
-		Router: Router
+		Router: Router,
+		IndexRoute: IndexRoute,
+		SelectedTabRoute: SelectedTabRoute
 	};
 
 	return App;

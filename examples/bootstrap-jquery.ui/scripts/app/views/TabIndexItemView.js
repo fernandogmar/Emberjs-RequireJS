@@ -17,7 +17,6 @@ define([
           }
       }.property("controller.selected").cacheable(),
       removeTab: function(e){
-        e.preventDefault();
         var tab = this.get("content");
         var controller = this.get("controller");
         
