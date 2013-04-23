@@ -15,7 +15,7 @@ define({
 		/*libs*/
 		'jquery': 'libs/jquery/1.9.1/jquery',
 		'handlebars': 'libs/handlebars/1.0.rc.3/handlebars',
-		'ember': 'libs/ember/1.0.0-rc.2/ember',
+		'ember': 'libs/ember/1.0.0-rc.3/ember',
 		/*requirejs-plugins*/
 		'text': 'libs/requirejs-plugins/text',
 		'hbs': 'libs/requirejs-plugins/hbs',
